@@ -30,11 +30,11 @@
 ```dri() { docker rmi $(docker images -q); }```
 
 ##### Log a container
-###### Should pass the name, f.e.: *dlog container_1*
+Should pass the name, f.e.: *dlog container_1*
 ```alias dlog="docker logs $1"```
 
 ##### Log and follow a container
-###### Should pass the name, f.e.: *dlog container_1*
+Should pass the name, f.e.: *dlog container_1*
 ```alias dlogf="docker logs -f $1"```
 
 ##### Sh into running container
@@ -46,5 +46,5 @@
 ##### Sh into running container
 ```dsh() { docker exec -it $(docker ps -aqf "name=$1") sh; }```
 
-##### Show all alias related docke
+##### Show all alias related dockers
 ```dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }```
