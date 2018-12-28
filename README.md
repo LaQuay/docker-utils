@@ -48,5 +48,5 @@ Should pass the name, f.e.: *dlog container_1*
 #### Sh into running container
 ```dsh() { docker exec -it $(docker ps -aqf "name=$1") sh; }```
 
-##### Show all alias related dockers
+#### Show all alias related dockers
 ```dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }```
