@@ -40,8 +40,10 @@ Should pass the name, e.g.: *dlog container_1*
 
 #### Sh into running container
 Should pass the name, e.g.: *dsh container_1*
+
 ```dsh() { docker exec -it $(docker ps -aqf "name=$1") sh; }```
 
 #### Bash into running container
 Should pass the name, e.g.: *dbash container_1*
+
 ```dbash() { docker exec -it $(docker ps -aqf "name=$1") bash; }```
