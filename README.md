@@ -34,7 +34,7 @@ Should pass the name, e.g.: *dlog container_1*
 ```alias dlog="docker logs $1"```
 
 #### Log and follow a container
-Should pass the name, e.g.: *dlog container_1*
+Should pass the name, e.g.: *dlogf container_1*
 
 ```alias dlogf="docker logs -f $1"```
 
