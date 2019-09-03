@@ -68,3 +68,12 @@ Should pass the name, e.g.: *dsh container_1*
 Should pass the name, e.g.: *dbash container_1*
 
 ```dbash() { docker exec -it $(docker ps -aqf "name=$1") bash; }```
+
+## Troubleshooting
+
+### UnixHTTPConnectionPool(host='localhost', port=None): Read timed out. (read timeout=60)
+```
+export DOCKER_CLIENT_TIMEOUT=120
+export COMPOSE_HTTP_TIMEOUT=120
+```
+Source: https://github.com/docker/compose/issues/3927
